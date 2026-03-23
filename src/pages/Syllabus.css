@@ -1,0 +1,136 @@
+/* Page */
+.syllabus-page {
+  min-height: 100vh;
+  padding: 3rem 5%;
+  background: linear-gradient(135deg, #f8fbff, #eef3ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+.syllabus-title {
+  text-align: center;
+  font-size: 2.6rem;
+  color: #1e3a8a;
+  margin-bottom: 0.4rem;
+}
+
+.syllabus-subtitle {
+  text-align: center;
+  color: #475569;
+  margin-bottom: 2.5rem;
+}
+
+/* Grid */
+.syllabus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.syllabus-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2rem 1.6rem;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.syllabus-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(37, 99, 235, 0.08));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.syllabus-card:hover::after {
+  opacity: 1;
+}
+
+.syllabus-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.14);
+}
+
+/* Icon */
+.syllabus-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Title */
+.syllabus-card h2 {
+  font-size: 1.3rem;
+  color: #1e40af;
+  margin-bottom: 1.6rem;
+}
+
+/* Buttons */
+.syllabus-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.syllabus-actions a {
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.syllabus-actions a:first-child {
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+
+.syllabus-actions a:first-child:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.syllabus-actions a:last-child {
+  background: #1e40af;
+  color: #fff;
+}
+
+.syllabus-actions a:last-child:hover {
+  background: #1e3a8a;
+}
+
+/* 🔥 MOBILE 360px → EXACTLY 2 CARDS */
+@media (max-width: 400px) {
+  .syllabus-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .syllabus-card {
+    padding: 1.4rem 0.8rem;
+  }
+
+  .syllabus-icon {
+    font-size: 2.4rem;
+  }
+
+  .syllabus-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .syllabus-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .syllabus-actions a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

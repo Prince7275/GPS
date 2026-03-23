@@ -1,0 +1,147 @@
+/* PAGE */
+.sport-page {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+  background: linear-gradient(135deg, #f7faff, #eef2ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+.sport-hero {
+  height: 55vh;
+  background: linear-gradient(
+      rgba(30, 58, 138, 0.8),
+      rgba(30, 58, 138, 0.8)
+    ),
+    url("https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10%;
+  animation: fadeDown 1.2s ease;
+}
+
+.sport-hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.sport-hero p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+/* GRID */
+.sport-grid {
+  margin-top: -80px;
+  padding: 0 6%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+.sport-card {
+  position: relative;
+  height: 320px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sport-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.sport-card:hover img {
+  transform: scale(1.15);
+}
+
+.sport-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* OVERLAY */
+.sport-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(30, 58, 138, 0.9),
+    rgba(30, 58, 138, 0.2),
+    transparent
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.6rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.sport-card:hover .sport-overlay {
+  opacity: 1;
+}
+
+.sport-overlay h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.sport-overlay p {
+  color: #e5edff;
+  font-size: 0.9rem;
+}
+
+/* ANIMATION */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE 360px */
+@media (max-width: 400px) {
+  .sport-hero {
+    height: 45vh;
+  }
+
+  .sport-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .sport-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: -60px;
+  }
+
+  .sport-card {
+    height: 220px;
+  }
+
+  .sport-overlay h2 {
+    font-size: 1rem;
+  }
+
+  .sport-overlay p {
+    font-size: 0.75rem;
+  }
+}

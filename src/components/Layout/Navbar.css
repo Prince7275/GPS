@@ -1,0 +1,871 @@
+.navbar {
+  position: relative;
+  padding-top: 58px; /* 🔥 menu-bar ki exact height */
+}
+
+
+/* Navbar.css - Professional Two-Row Layout with Sticky Menu Bar */
+
+:root {
+  --primary-color: #1a3a6c;
+  --primary-dark: #0d2a52;
+  --secondary-color: #FDC800;
+  --accent-color: #1d7874;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --text-color: #333;
+  --text-light: #6c757d;
+  --border-color: #e0e0e0;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+.navbar {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  background: white;
+  color: var(--text-color);
+  z-index: 1000;
+}
+
+/* ===== HEADER SECTION (TOP ROW) ===== */
+.header-section {
+  background: white;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+
+.header-section {
+  height: auto;
+}
+
+.header-section.collapsed {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  border-bottom: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Logo wrapper for all screens */
+.logo-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+/* Logo containers */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-container.left {
+  justify-content: flex-start;
+}
+
+.logo-container.right {
+  justify-content: flex-end;
+}
+
+/* College logos */
+.college-logo {
+  height: auto;
+  max-height: 65px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.csc-logo {
+  max-height: 85px;
+}
+
+.college-logo:hover {
+  transform: scale(1.03);
+}
+
+/* College info - center section */
+.college-info {
+  text-align: center;
+  padding: 0 10px;
+  min-width: 0; /* Allows text truncation */
+}
+
+.college-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.college-name {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.college-name-mobile {
+  display: none; /* Hidden by default, shown only on mobile */
+}
+
+.college-name-mobile-line1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.college-name-mobile-line2 {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin: 2px 0 0 0;
+  line-height: 1.2;
+}
+
+.college-details {
+  margin-top: 4px;
+}
+
+.college-tagline {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  margin: 3px 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.college-affiliation {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin: 3px 0 0 0;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* ===== STICKY MENU BAR SECTION ===== */
+.menu-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--primary-color);
+  z-index: 2000;
+}
+
+.menu-bar-inner {
+  background: var(--primary-color);
+  width: 100%;
+  padding: 6px 0;
+}
+
+.menu-bar.scrolled .menu-bar-inner {
+  padding: 4px 0;
+  
+}
+
+.menu-bar.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+/* Compact logo visible only when scrolled */
+.scrolled-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1200;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scrolled-logo.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) translateX(0);
+}
+
+.compact-logo {
+  height: 30px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* Menu container for navigation */
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-height: 46px;
+  padding: 0 10px;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 0 auto;
+}
+
+/* When scrolled logo is visible */
+.menu-bar.scrolled .desktop-nav {
+  margin-left: 160px;
+}
+
+/* Navigation items */
+.nav-item {
+  position: relative;
+}
+
+.nav-link, .dropdown-toggle {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nav-link:hover, .dropdown-toggle:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link.active {
+  color: white;
+  background: var(--secondary-color);
+  box-shadow: 0 3px 8px rgba(230, 57, 70, 0.3);
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-right: 10px;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.nav-item.active-dropdown .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 220px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--transition);
+  z-index: 1200;
+  border-top: 3px solid var(--secondary-color);
+  padding: 6px 0;
+}
+
+.nav-item:hover .dropdown-content,
+.nav-item.active-dropdown .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: block;
+  padding: 10px 18px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+}
+
+.dropdown-link:hover {
+  background: var(--light-color);
+  color: var(--primary-color);
+  border-left-color: var(--accent-color);
+  padding-left: 20px;
+}
+
+/* Menu Actions */
+.menu-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+  margin-left: auto;
+}
+
+/* Mobile Toggle Button - Always visible on mobile */
+.mobile-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* Mobile Navigation - Fixed Position Full Screen */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 1300;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background: var(--primary-color);
+  color: white;
+  min-height: 56px;
+}
+
+.mobile-nav-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.mobile-nav-logo {
+  height: 35px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.mobile-nav-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.mobile-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.mobile-close-btn:hover {
+  transform: scale(1.1);
+}
+
+.mobile-nav-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.mobile-nav-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.mobile-nav-link.active {
+  color: var(--primary-color);
+  background: rgba(26, 58, 108, 0.04);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.mobile-dropdown-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.mobile-dropdown-toggle:hover {
+  color: var(--primary-color);
+  background: rgba(26, 58, 108, 0.04);
+}
+
+.mobile-dropdown-toggle .rotated {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown {
+  background: var(--light-color);
+  border-left: 4px solid var(--accent-color);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-dropdown-link {
+  display: block;
+  padding: 12px 16px 12px 36px;
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.mobile-dropdown-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-dropdown-link:hover {
+  background: white;
+  color: var(--primary-color);
+  padding-left: 40px;
+}
+
+.mobile-nav-footer {
+  padding: 16px;
+  border-top: 1px solid var(--border-color);
+  background: var(--light-color);
+  flex-shrink: 0;
+}
+
+.mobile-contact {
+  margin-bottom: 12px;
+}
+
+.mobile-contact p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+}
+
+.mobile-social {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.mobile-social a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+  font-size: 0.85rem;
+}
+
+.mobile-social a:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .logo-wrapper {
+    gap: 12px;
+  }
+  
+  .college-logo {
+    max-height: 100px;
+  }
+  
+  .csc-logo {
+    max-height: 70px;
+  }
+
+  .college-name {
+    font-size: 1.4rem;
+  }
+
+  .college-tagline {
+    font-size: 0.9rem;
+  }
+
+  .college-affiliation {
+    font-size: 0.75rem;
+  }
+  
+  .desktop-nav {
+    margin-left: 140px;
+  }
+  
+  .menu-bar.scrolled .desktop-nav {
+    margin-left: 140px;
+  }
+  
+  .scrolled-logo {
+    font-size: 1rem;
+    padding: 4px 8px;
+  }
+  
+  .compact-logo {
+    height: 28px;
+  }
+  
+  .nav-link, .dropdown-toggle {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .header-section {
+    padding: 0;
+  }
+  
+  /* Keep side logos visible on mobile */
+  .logo-wrapper {
+    grid-template-columns: auto 1fr auto;
+    gap: 8px;
+    padding: 8px 0;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    min-width: 50px;
+  }
+  
+  .college-logo {
+    max-height: 45px;
+    width: auto;
+  }
+  
+  .csc-logo {
+    max-height: 55px;
+  }
+  
+  .college-info {
+    padding: 0 5px;
+    text-align: center;
+  }
+  
+  /* Hide desktop college name, show mobile version */
+  .college-name {
+    display: none;
+  }
+  
+  .college-name-mobile {
+    display: block;
+  }
+  
+  .college-name-mobile-line1 {
+    font-size: 1.1rem;
+    line-height: 1.1;
+  }
+  
+  .college-name-mobile-line2 {
+    font-size: 0.9rem;
+    margin-top: 2px;
+  }
+  
+  /* Hide tagline and affiliation on mobile */
+  .college-tagline,
+  .college-affiliation {
+    display: none;
+  }
+  
+  /* Desktop nav hidden on mobile */
+  .desktop-nav {
+    display: none;
+  }
+  
+  /* Show mobile toggle button */
+  .mobile-toggle {
+    display: flex;
+  }
+  
+  .menu-container {
+    padding: 0;
+    min-height: 44px;
+    justify-content: flex-end; /* Push toggle to right */
+  }
+  
+  .menu-bar.scrolled .desktop-nav {
+    display: none;
+  }
+  
+  .menu-bar-inner {
+    padding: 4px 0;
+  }
+  
+  .scrolled-logo {
+    left: 12px;
+    padding: 3px 6px;
+    font-size: 0.9rem;
+  }
+  
+  .compact-logo {
+    height: 26px;
+  }
+  
+  .menu-actions {
+    gap: 6px;
+    padding-left: 0;
+  }
+  
+  /* Adjust desktop nav for scrolled state on mobile */
+  .menu-bar.scrolled .desktop-nav {
+    margin-left: 0;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .logo-wrapper {
+    gap: 6px;
+    padding: 6px 0;
+  }
+  
+  .college-logo {
+    max-height: 40px;
+  }
+  
+  .csc-logo {
+    max-height: 50px;
+  }
+  
+  .logo-container {
+    min-width: 40px;
+  }
+  
+  .college-name-mobile-line1 {
+    font-size: 1rem;
+  }
+  
+  .college-name-mobile-line2 {
+    font-size: 0.85rem;
+  }
+  
+  .scrolled-logo {
+    left: 8px;
+    font-size: 0.85rem;
+    padding: 2px 5px;
+  }
+  
+  .compact-logo {
+    height: 24px;
+  }
+  
+  .mobile-toggle {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+  
+  .mobile-nav-header {
+    padding: 10px 12px;
+    min-height: 52px;
+  }
+  
+  .mobile-nav-logo {
+    height: 30px;
+  }
+  
+  .mobile-nav-title {
+    font-size: 0.95rem;
+  }
+  
+  .mobile-nav-link,
+  .mobile-dropdown-toggle {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+  
+  .mobile-dropdown-link {
+    padding: 10px 14px 10px 32px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media (max-width: 360px) {
+  .college-logo {
+    max-height: 36px;
+  }
+  
+  .csc-logo {
+    max-height: 45px;
+  }
+  
+  .logo-container {
+    min-width: 35px;
+  }
+  
+  .college-name-mobile-line1 {
+    font-size: 0.95rem;
+  }
+  
+  .college-name-mobile-line2 {
+    font-size: 0.8rem;
+  }
+  
+  .scrolled-logo {
+    left: 6px;
+    font-size: 0.8rem;
+    padding: 2px 4px;
+  }
+  
+  .compact-logo {
+    height: 22px;
+  }
+  
+  .mobile-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .mobile-nav-title {
+    font-size: 0.9rem;
+  }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Accessibility Improvements */
+.nav-link:focus,
+.mobile-toggle:focus,
+.dropdown-link:focus,
+.mobile-nav-link:focus,
+.mobile-dropdown-link:focus,
+.mobile-dropdown-toggle:focus,
+.mobile-close-btn:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}

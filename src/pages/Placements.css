@@ -1,0 +1,495 @@
+.placements-page {
+  min-height: calc(100vh - 200px);
+}
+
+.placements-hero {
+  background: linear-gradient(rgba(52, 152, 219, 0.9), rgba(41, 128, 185, 0.7)),
+              url('https://picsum.photos/1600/600?random=6');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.placement-highlight {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.highlight-stat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  min-width: 250px;
+}
+
+.highlight-icon {
+  font-size: 3rem;
+  color: white;
+}
+
+.highlight-stat h3 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: white;
+}
+
+.highlight-stat p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.stats-section {
+  padding: 4rem 0;
+  background-color: var(--light-color);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.year-filter {
+  display: flex;
+  gap: 0.5rem;
+  background-color: var(--card-bg);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.year-btn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background: none;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.year-btn:hover {
+  background-color: var(--light-color);
+}
+
+.year-btn.active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--secondary-color);
+}
+
+.stat-icon {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.stat-card h3 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.growth-chart {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.chart-bars {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4rem;
+  height: 300px;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.chart-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 80px;
+}
+
+.bar-fill {
+  width: 50px;
+  background-color: var(--secondary-color);
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: height 1s ease;
+}
+
+.bar-value {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.bar-label {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.recruiters-section {
+  padding: 4rem 0;
+}
+
+.recruiters-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.recruiter-logo {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.recruiter-logo:hover {
+  border-color: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+.company-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.recruiter-count {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.packages-section {
+  background-color: var(--light-color);
+  padding: 4rem 0;
+}
+
+.packages-table {
+  overflow-x: auto;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.packages-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.packages-table th,
+.packages-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.packages-table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.package-amount {
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.tpc-section {
+  padding: 4rem 0;
+}
+
+.tpc-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tpc-description {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.tpc-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.tpc-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tpc-info ul {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tpc-info li {
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.tpc-info li::before {
+  content: '✓';
+  position: absolute;
+  left: -1.5rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.training-programs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.program-card {
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.program-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.program-duration {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.process-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.process-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.testimonials-section {
+  background-color: var(--light-color);
+  padding: 4rem 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--secondary-color);
+}
+
+.student-avatar {
+  width: 60px;
+  height: 60px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.package {
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.contact-tp-section {
+  padding: 4rem 0;
+}
+
+.contact-tp-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: var(--shadow);
+}
+
+.contact-details {
+  margin: 1.5rem 0;
+}
+
+.contact-details p {
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.download-brochure {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.download-brochure:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .recruiters-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tpc-content {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-tp-card {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .placement-highlight {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight-stat {
+    width: 100%;
+  }
+
+  .recruiters-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-programs {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-bars {
+    gap: 2rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,85 @@
+/* ===============================
+   App.css – Safe Base Styles
+   =============================== */
+
+/* Root wrapper */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc; /* soft light background */
+  color: #1e293b; /* dark slate text */
+  overflow-x: hidden; /* 🔥 FIX horizontal scroll */
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* 🔥 extra safety */
+  background-color: #f8fafc;
+}
+
+/* Prevent common overflow causes */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix for flex/grid overflow bugs */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove default body overflow */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* 🔥 MOST IMPORTANT */
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Links – clean & professional */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Smooth transitions */
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+/* Utility container (optional use) */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* Scrollbar (optional premium touch) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb; /* primary blue */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}

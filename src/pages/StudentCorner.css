@@ -1,0 +1,362 @@
+.student-corner-page {
+  min-height: calc(100vh - 200px);
+}
+
+.student-hero {
+  background: linear-gradient(rgba(46, 204, 113, 0.9), rgba(39, 174, 96, 0.7)),
+              url('https://picsum.photos/1600/600?random=4');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.portal-section {
+  padding: 3rem 0;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.portal-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.portal-card:hover {
+  border-color: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+.portal-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.portal-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.resources-section {
+  background-color: var(--light-color);
+  padding: 3rem 0;
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  background-color: var(--card-bg);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background-color: var(--light-color);
+}
+
+.tab.active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.search-box {
+  position: relative;
+  min-width: 300px;
+}
+
+.tab-content {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.tab-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateX(5px);
+}
+
+.resource-icon {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+.resource-info {
+  flex: 1;
+}
+
+.resource-info h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.file-info,
+.schedule {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.results-table {
+  overflow-x: auto;
+}
+
+.results-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th,
+.results-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.results-table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.result-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.result-link:hover {
+  text-decoration: underline;
+}
+
+.elearning-section {
+  padding: 3rem 0;
+}
+
+.elearning-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.elearning-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.elearning-card:hover {
+  border-color: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+.elearning-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.access-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.announcements-section {
+  background-color: var(--light-color);
+  padding: 3rem 0;
+}
+
+.announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.announcement-card {
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+  box-shadow: var(--shadow);
+}
+
+.announcement-date {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.announcement-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.quicklinks-section {
+  padding: 3rem 0;
+}
+
+.quicklinks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.quicklink-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.quicklink-card:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.quicklink-card:hover h4,
+.quicklink-card:hover p {
+  color: white;
+}
+
+.quicklink-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.quicklink-card p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .portal-grid,
+  .elearning-grid,
+  .quicklinks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portal-grid,
+  .elearning-grid,
+  .quicklinks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .resource-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}

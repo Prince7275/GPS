@@ -1,0 +1,333 @@
+.campus-life-page {
+  min-height: calc(100vh - 200px);
+}
+
+.campus-hero {
+  background: linear-gradient(rgba(155, 89, 182, 0.9), rgba(142, 68, 173, 0.7)),
+              url('https://picsum.photos/1600/600?random=5');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.gallery-section {
+  padding: 4rem 0;
+}
+
+.gallery-filter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--secondary-color);
+  background: none;
+  color: var(--secondary-color);
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.filter-btn.active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 250px;
+  cursor: pointer;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  transform: translateY(0);
+}
+
+.gallery-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-overlay h4 {
+  color: white;
+  margin: 0;
+}
+
+.view-all-btn {
+  text-align: center;
+}
+
+.clubs-section {
+  background-color: var(--light-color);
+  padding: 4rem 0;
+}
+
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.club-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.club-card:hover {
+  transform: translateY(-10px);
+}
+
+.club-icon {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.club-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.club-members {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.sports-section {
+  padding: 4rem 0;
+}
+
+.sports-facilities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.facility-card {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.facility-card:hover {
+  border-color: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+.facility-icon {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.achievement-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.achievement-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.cultural-section {
+  background-color: var(--light-color);
+  padding: 4rem 0;
+}
+
+.events-slider {
+  margin-bottom: 3rem;
+}
+
+.event-slide {
+  padding: 1rem;
+}
+
+.event-card {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+
+.event-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.event-month {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 20px;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.cultural-highlights {
+  margin-top: 2rem;
+}
+
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.events-list li {
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.facilities-section {
+  padding: 4rem 0;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.facility-feature {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.facility-feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.facility-feature h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .clubs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sports-facilities {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clubs-grid,
+  .sports-facilities,
+  .achievements-grid,
+  .facilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .events-list {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 200px;
+  }
+}
