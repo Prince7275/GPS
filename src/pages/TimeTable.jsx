@@ -1,4 +1,4 @@
-import "./Timetable.css";
+import "./TimeTable.css";
 import { Download, FileText } from "lucide-react";
 
 const Timetable = () => {
