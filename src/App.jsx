@@ -11,7 +11,7 @@ import ContactFloat from "./components/Layout/ContactFloat";
 import Courses from "./pages/Courses";
 import Event from "./pages/Event";
 import Faculty from "./pages/Faculty";
-import Footer from "./components/layout/Footer";
+import Footer from "./components/Layout/Footer";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import Navbar from "./components/Layout/Navbar";
